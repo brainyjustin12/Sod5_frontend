@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { LogOut, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import avatar from '../assets/avatar.jpg';
+import avatar from '../assets/avatar.png';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
