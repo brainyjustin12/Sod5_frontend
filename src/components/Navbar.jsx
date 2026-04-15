@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Shield, LogOut, Menu, X } from 'lucide-react';
+import { LogOut, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import avatar from '../assets/avatar.jpg';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -14,7 +15,8 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary-700">
-          <Shield className="w-6 h-6" /> HealthCert
+          <img src={avatar} alt="HealthCert" className="w-8 h-8 rounded-full object-cover" />
+          HealthCert
         </Link>
         <div className="hidden md:flex items-center gap-6">
           <Link to="/verify" className="text-gray-600 hover:text-primary-700 font-medium">Verify</Link>
